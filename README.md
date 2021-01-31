@@ -6,8 +6,11 @@
 Program başlatıldığında ana sayfa açılır. Ana sayfadan kullanıcı veya yönetici girişinin seçilmesine göre giriş ekranları açılır. Database üzerinden çekilen bilgilerin kullanıcıdan alınan bilgiler ile karşılaştırılması üzerine kullanıcı veya yönetici giriş yapar. Hatalı bilgi girimi durumunda yanlış şifre ya da kullanıcı adı girildiği belirtilir. Kayıtlı olmayan kullanıcı siteye üye olabilir. Kullanıcı giriş yapar ise ısbn veya kitap ismine göre kitap arama ve listeleme yapabilir. Kullanıcı kitap almak isterse üzerinde teslim tarihi geçmiş kitap olup olmadığı, kullanıcı üzerinde kayıtlı kitap sayısı, istenilen kitabın başka bir kullanıcı üzerine kayıtlı olup olmaması durumu database den çekilen bilgiler eşliğinde kontrol edilir. Koşulların sağlanması durumunda kullanıcı kitap alabilir. 	Kullanıcı kitap iade etmek istediğinde iade etmek istediği kitabın kullanıcı üzerinde kayıtlı olup olmadığı kontrol edilir ve koşul sağlanırsa kullanıcı kitabı iade eder bunun ardından ilgili database tabloları güncellenir. Yöneticinin giriş yapması durumunda, yönetici kitap resmi ve kitabın adını girerek sisteme kitap ekleyebilir. Sistem zamanını istenilen tarihe ilerletebilir. Kullanıcıların üzerindeki kitapları görüntüleyebilir.
 
 Kullanılan Fonksiyonlar
+
 •	protected void Page_Load(object sender, EventArgs e)
+
 Bu fonksiyon program çalışmaya başladığı anda sistem zaman tablosu boş ise bugünün zamanını tabloya insert eder.
+
 •	protected void btnUpload_Click(object sender, EventArgs e) 
 Bu fonksiyon dosyadan resim yükleme işlemi gerçekleştirir. Aynı zamanda yüklenen resmin üerindeki yazıları iron OCR kullanarak okur. Çeşitli adımların uygulanması sonucu resmin üzerindeki ısbn numarası bir değişkenin üzerine atanır.
 •	protected void insert_Click(object sender, EventArgs e)
